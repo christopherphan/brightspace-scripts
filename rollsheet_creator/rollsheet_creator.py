@@ -22,13 +22,10 @@ with open(infilename_d2l, 'rt') as infile:
     for (index, row) in enumerate(studentreader):
         if index == 0:
             for (index2, col) in enumerate(row):
-                studentlist_fieldlist[col] = index2
+                studentlist_fieldlist[col.split("Text")[0].strip()] = index2
         else:
             if sectionname != "":
-                try:
-                    student_section = studentlist_fieldlist["Section"]
-                except:
-                    print("Warning: No section data present!")
+                student_section = row[studentlist_fieldlist["Section"]]
             else:
                 student_section = ""
             if (sectionname == "" or sectionname == student_section):
@@ -44,7 +41,7 @@ studentlist.sort()
 
 out_TeX_file = infilename_d2l + "_rollsheet"
 if sectionname != "":
-    out_TeX_file += + "_" + sectionname
+    out_TeX_file += "_" + sectionname
 out_TeX_file += ".tex"
 
 with open(infilename_template, 'rt') as template_file:
