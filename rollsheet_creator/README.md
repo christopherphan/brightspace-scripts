@@ -2,7 +2,7 @@
 
 Christopher L. Phan, Ph.D. <cphan@chrisphan.com>
 
-<https://github.com/christopherphan/brightspace-scripts/rollsheet_creator>
+<https://github.com/christopherphan/brightspace-scripts/>
 
 ## Purpose
 
