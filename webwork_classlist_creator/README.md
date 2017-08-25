@@ -2,6 +2,8 @@
 
 Christopher L. Phan, Ph.D. <cphan@chrisphan.com>
 
+<https://github.com/christopherphan/brightspace-scripts>
+
 ## Purpose
 
 The Python script ``webwork_classlist_creator.py`` produces a WeBWorK ``.lst`` file given a ``.csv`` file produced by D2L Brightspace.
