@@ -2,6 +2,8 @@
 
 Christopher Phan, Ph.D., <cphan@chrisphan.com>
 
+<https://github.com/christopherphan/brightspace-scripts>
+
 These scripts make it easier to work with Desire2Learn Brightspace, especially in conjunction with WeBWorK. They are written for Python 3.
 
 * ``rollsheet_creator.py``: Takes a CSV file produced by the Brightspace grade export feature, and produces a rollsheet.
