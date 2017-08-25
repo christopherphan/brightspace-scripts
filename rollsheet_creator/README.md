@@ -2,6 +2,8 @@
 
 Christopher L. Phan, Ph.D. <cphan@chrisphan.com>
 
+<https://github.com/christopherphan/brightspace-scripts/rollsheet_creator>
+
 ## Purpose
 
 The Python script ``rollsheet_creator.py`` produces roll sheet (PDF form), given a CSV file created by the WeBWorK grade export feature in D2L Brightspace.
