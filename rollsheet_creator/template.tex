@@ -1,0 +1,45 @@
+
+\documentclass[letterpaper, 10pt]{article}
+
+%% packages
+
+\usepackage[margin=1in,headheight=0.5in]{geometry}
+\usepackage{fouriernc}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textbf{Roll Sheet}, MATH 123, Section \secname, Fall 2017}
+
+\newcommand\rollsheetbox[1]{
+  \noindent \framebox{
+    \begin{minipage}{3 in}
+      #1\\[0.4 em]
+      \phantom{x}
+    \end{minipage}
+  }
+  \vskip 1 pt
+}
+
+\newcommand\secname[1]{
+%%SECTION REPLACE
+}
+
+\begin{document}
+
+\begin{multicols}{2}
+
+  \noindent Date:
+
+  \vskip 1.5 em
+
+  \noindent Please sign in below. If your name is not on this list, please write it neatly at the end.
+  \vskip 0.5 em
+
+%%ROLL NAMES HERE
+
+\end{multicols}
+
+\end{document}
