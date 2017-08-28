@@ -1,10 +1,10 @@
 #! /usr/bin/env python3
 
-# webwork_grades_to_brightspace.py
+# webassign_grades_to_brightspace.py
 #
 # Christopher L. Phan, Ph.D.
 # cphan@chrisphan.com
-# Last updated: 2017-08-24
+# Last updated: 2017-08-28
 #
 #################################
 
@@ -29,7 +29,7 @@
 # SOFTWARE.
 
 help_string = """
-webwork_grades_to_brightspace.py
+webassign_grades_to_brightspace.py
 
 Copyright (c) 2017 Christopher L. Phan
 
