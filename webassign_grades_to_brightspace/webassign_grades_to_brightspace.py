@@ -36,22 +36,20 @@ Copyright (c) 2017 Christopher L. Phan
 See README.md or source code for important license and disclaimer of warranty
 notice.
 
-Converts the WeBWorK grade export to file that can be imported under
-D2L Brightspace
+Converts a WebAssign grade export file to a format that can be imported under D2L Brightspace.
 
-For this script to work, you need 2 files.
+For this script to work, you need 2 files:
 
-First is a D2L Brightspace CSV grade export produced with the following
+First is a CSV file exported from the D2L Brightspace gradebook feature using with the following
 options:
 
-Key field: "Both"
-User details: All three checked (last name, first name, and email)
+* Key field: "Both"
+* User details: All three checked (last name, first name, and email)
+* A "WebAssignUsername" field with their WebAssign Username 
 
-Second is the WeBWorK grade export. NOTE: We assume the student's userid on
-WeBWorK is the same as their userid on D2L Brightspace (in the case of
-Minnesota State students, that would be their StarID).
+Second is the WebAssign grade export, exported in "xls" format. Note that WebAssign actually exports as a tab-delimited CSV file!
 
-syntax: ./webwork_grades_to_brightspace.py [d2l input file] [WeBWorK input file] [D2L output file]
+syntax: ./webassign_grades_to_brightspace.py [d2l input file] [WeBWorK input file] [D2L output file]
 """
 
 import csv
@@ -62,46 +60,54 @@ if len(sys.argv) != 4:
     sys.exit()
 
 infilename_d2l =  sys.argv[1]
-infilename_ww =  sys.argv[2]
+infilename_wa =  sys.argv[2]
 outfilename = sys.argv[3]
 
 
 # Step 1: Read the list of students from the D2L download
 
-studentlist = []
+studentlist = dict()
 
 with open(infilename_d2l, 'rt') as infile:
     studentreader = csv.reader(infile, delimiter=',')
     for (index, row) in enumerate(studentreader):
-        if index != 0:
-            studentlist.append(row[0][1:].strip())
+        if index == 0:
+            wa_un_idx = row.index("WebAssignUsername Text Grade <Text>")
+        else:
+            studentlist[row[wa_un_idx].strip()] = (row[0].strip(), row[1].strip())
 
 # Step 2: Scrape out the scores
 
 setnames = []
 
-with open(infilename_ww, 'rt') as infile:
-    wwreader = csv.reader(infile, delimiter=',')
+with open(infilename_wa, 'rt') as infile:
+    wareader = csv.reader(infile, delimiter='\t')
     studentpart = False
-    for row in wwreader:
-        if (studentpart and row[0].strip() in studentlist):
-            output.append(["#"+ row[0].strip(), "#" + row[1].strip()])
+    for row in wareader:
+        if studentpart:
+            curstudent = row[1].strip()
+        if (studentpart and curstudent in studentlist):
+            output.append([studentlist[curstudent][0], studentlist[curstudent][1]])
             for column in setnames:
-                output[-1].append(row[column[1]].strip())
+                curscore = row[column[1]].strip()
+                if (curscore == "NS" or curscore == "ND" or curscore == ""):
+                    curscore = "0"
+                output[-1].append(curscore)
             output[-1].append("#")
-        if (not studentpart):
-            if (row[0].strip() == "SET NAME"):
+        if (row != [] and not studentpart):
+            if (row[0].strip() == "Assignment Name"):
                 # Read off the set names and store in "setnames"
-                i = 0
-                for column in row:
-                    if (column.strip() !="" and column.strip() != "summary" and column.strip() != "%score" and column.strip() != "SET NAME"):
-                        setnames.append([column.strip(), i])
-                    i += 1
-            elif (row[0].strip() == "PROB VALUE"):
+                for (idx2, column) in enumerate(row):
+                    if (column.strip() !="" and column.strip() != "Total" and
+                        column.strip() != "Assignment Name"):
+                        assign_name = column.strip()
+                        assign_name = assign_name.replace(",", " ")
+                        setnames.append([assign_name, idx2])
+            elif (row[0].strip() == "Totals"):
                 # Read off the value names and put in the set names
                 for column in setnames:
                     column.append(row[column[1]].strip())
-            elif (row[0].strip() == "STUDENT ID"):
+            elif (row[0].strip() == "Fullname"):
                 # We are ready to read the scores, set up the output
                 output = [['OrgDefinedId', 'Username']]
                 for column in setnames:

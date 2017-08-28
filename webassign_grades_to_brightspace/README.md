@@ -10,7 +10,7 @@ This code is still being adapted from the WeBWorK version; it is not ready to be
 
 ## Purpose
 
-The Python script ``webassign_grades_to_brightspace.py`` converts the WebAssign grade export to file that can be imported under D2L Brightspace.
+The Python script ``webassign_grades_to_brightspace.py`` converts the WebAssign grade export to a format that can be imported under D2L Brightspace.
 
 This script is written for Python 3.
 
@@ -23,7 +23,7 @@ options:
 
 * Key field: "Both"
 * User details: All three checked (last name, first name, and email)
-* A "WebAssignID" field with their
+* A "WebAssignUsername" field with their WebAssign username 
 
 Second is the WebAssign grade export, exported in ``xls`` format. Note that WebAssign actually exports as a tab-delimited CSV file!
 
