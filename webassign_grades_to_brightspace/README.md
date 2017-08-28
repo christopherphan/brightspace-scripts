@@ -1,18 +1,34 @@
-# Brightspace Python 3 Scripts
+# WebAssign Grades to Brightspace (IN DEVELOPMENT)
 
-Christopher Phan, Ph.D., <cphan@chrisphan.com>
+Christopher L. Phan, Ph.D. <cphan@chrisphan.com>
 
 <https://github.com/christopherphan/brightspace-scripts>
 
-These scripts make it easier to work with Desire2Learn Brightspace, especially in conjunction with WeBWorK. They are written for Python 3.
+## NOTE:
 
-* ``rollsheet_creator.py``: Takes a CSV file produced by the Brightspace grade export feature, and produces a rollsheet.
+This code is still being adapted from the WeBWorK version; it is not ready to be used.
 
-* ``webwork_classlist_creator.py``: Takes a CSV file produced by the Brightspace grade export feature, and produces a WeBWorK ``.lst`` file.
+## Purpose
 
-* ``webassign_grades_to_brightspace.py``: Takes a CSV file produced by the WebAssign grade export feature, and produces a CSV file suitable for importing into the Brightspace grade book.
+The Python script ``webassign_grades_to_brightspace.py`` converts the WebAssign grade export to a format that can be imported under D2L Brightspace.
 
-* ``webwork_grades_to_brightspace.py``: Takes a CSV file produced by the WeBWorK grade export feature, and produces a CSV file suitable for importing into the Brightspace grade book.
+This script is written for Python 3.
+
+## Usage
+
+For this script to work, you need 2 files:
+
+First is a CSV file exported from the D2L Brightspace gradebook feature using with the following
+options:
+
+* Key field: "Both"
+* User details: All three checked (last name, first name, and email)
+* A "WebAssignUsername" field with their WebAssign username 
+
+Second is the WebAssign grade export, exported in ``xls`` format. Note that WebAssign actually exports as a tab-delimited CSV file!
+
+Syntax:
+> ``./webassign_grades_to_brightspace.py [d2l input file] [WeBWorK input file] [D2L output file]``
 
 ## Important license/warranty notice
 
