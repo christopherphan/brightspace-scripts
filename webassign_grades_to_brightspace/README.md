@@ -1,8 +1,12 @@
-# WebAssign Grades to Brightspace
+# WebAssign Grades to Brightspace (IN DEVELOPMENT)
 
 Christopher L. Phan, Ph.D. <cphan@chrisphan.com>
 
 <https://github.com/christopherphan/brightspace-scripts>
+
+## NOTE:
+
+This code is still being adapted from the WeBWorK version; it is not ready to be used.
 
 ## Purpose
 
