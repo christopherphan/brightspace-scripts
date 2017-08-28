@@ -10,6 +10,8 @@ These scripts make it easier to work with Desire2Learn Brightspace, especially i
 
 * ``webwork_classlist_creator.py``: Takes a CSV file produced by the Brightspace grade export feature, and produces a WeBWorK ``.lst`` file.
 
+* ``webassign_grades_to_brightspace.py``: Takes a CSV file produced by the WebAssign grade export feature, and produces a CSV file suitable for importing into the Brightspace grade book.
+
 * ``webwork_grades_to_brightspace.py``: Takes a CSV file produced by the WeBWorK grade export feature, and produces a CSV file suitable for importing into the Brightspace grade book.
 
 ## Important license/warranty notice
