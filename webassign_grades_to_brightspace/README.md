@@ -1,12 +1,8 @@
-# WebAssign Grades to Brightspace (IN DEVELOPMENT)
+# WebAssign Grades to Brightspace
 
 Christopher L. Phan, Ph.D. <cphan@chrisphan.com>
 
 <https://github.com/christopherphan/brightspace-scripts>
-
-## NOTE:
-
-This code is still being adapted from the WeBWorK version; it is not ready to be used.
 
 ## Purpose
 
@@ -23,7 +19,7 @@ options:
 
 * Key field: "Both"
 * User details: All three checked (last name, first name, and email)
-* A "WebAssignUsername" field with their WebAssign username 
+* A "WebAssignUsername" field with their WebAssign username
 
 Second is the WebAssign grade export, exported in ``xls`` format. Note that WebAssign actually exports as a tab-delimited CSV file!
 
