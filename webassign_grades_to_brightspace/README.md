@@ -1,4 +1,4 @@
-# WeBWorK Grades to Brightspace
+# WebAssign Grades to Brightspace
 
 Christopher L. Phan, Ph.D. <cphan@chrisphan.com>
 
@@ -6,7 +6,7 @@ Christopher L. Phan, Ph.D. <cphan@chrisphan.com>
 
 ## Purpose
 
-The Python script ``webwork_grades_to_brightspace.py`` converts a WeBWorK grade export to a format that can be imported by D2L Brightspace.
+The Python script ``webassign_grades_to_brightspace.py`` converts the WebAssign grade export to file that can be imported under D2L Brightspace.
 
 This script is written for Python 3.
 
@@ -19,13 +19,12 @@ options:
 
 * Key field: "Both"
 * User details: All three checked (last name, first name, and email)
+* A "WebAssignID" field with their
 
-Second is the WeBWorK grade export. NOTE: We assume the student's userid on
-WeBWorK is the same as their userid on D2L Brightspace (in the case of
-Minnesota State students, that would be their StarID).
+Second is the WebAssign grade export, exported in ``xls`` format. Note that WebAssign actually exports as a tab-delimited CSV file!
 
 Syntax:
-> ``./webwork_grades_to_brightspace.py [d2l input file] [WeBWorK input file] [D2L output file]``
+> ``./webassign_grades_to_brightspace.py [d2l input file] [WeBWorK input file] [D2L output file]``
 
 ## Important license/warranty notice
 
