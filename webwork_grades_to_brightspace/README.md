@@ -6,7 +6,7 @@ Christopher L. Phan, Ph.D. <cphan@chrisphan.com>
 
 ## Purpose
 
-The Python script ``webwork_grades_to_brightspace.py`` converts a WeBWorK grade export to a format that can be imported by D2L Brightspace.
+The Python script ``webwork_grades_to_brightspace.py`` converts a WeBWorK grade export file to a format that can be imported by D2L Brightspace.
 
 This script is written for Python 3.
 
