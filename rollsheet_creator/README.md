@@ -24,7 +24,7 @@ options:
 Second is a LaTeX template file. This file should have the following:
 
 * A ``\rollsheetbox`` macro which takes one argument, the student's name.
-* A line consisting only of the comment>
+* A line consisting only of the comment:
 
    > ``%%ROLL NAMES HERE``
 
