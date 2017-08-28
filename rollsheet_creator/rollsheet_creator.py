@@ -58,12 +58,12 @@ import csv
 import sys
 import subprocess
 
-infilename_d2l =  sys.argv[1]
-infilename_template =  sys.argv[2]
-
 if len(sys.argv) < 3 or len(sys.argv) > 5:
     print(help_string)
     sys.exit()
+
+infilename_d2l =  sys.argv[1]
+infilename_template =  sys.argv[2]
 
 if len(sys.argv) == 4:
     sectionname = sys.argv[3]
