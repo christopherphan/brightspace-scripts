@@ -21,7 +21,7 @@ options:
 * User details: All three checked (last name, first name, and email)
 * A "WebAssignUsername" field with their WebAssign username
 
-Second is the WebAssign grade export, exported in ``xls`` format. Note that WebAssign actually exports as a tab-delimited CSV file!
+Second is the WebAssign grade export, exported in ``tsv`` format. 
 
 Syntax:
 > ``./webassign_grades_to_brightspace.py [d2l input file] [WeBWorK input file] [D2L output file]``
