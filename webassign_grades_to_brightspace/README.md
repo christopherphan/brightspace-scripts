@@ -1,22 +1,34 @@
-# Brightspace Python 3 Scripts
+# WebAssign Grades to Brightspace
 
-Christopher Phan, Ph.D., <cphan@chrisphan.com>
+Christopher L. Phan, Ph.D. <cphan@chrisphan.com>
 
 <https://github.com/christopherphan/brightspace-scripts>
 
-These scripts make it easier to work with Desire2Learn Brightspace, especially in conjunction with WeBWorK. They are written for Python 3.
+## Purpose
 
-* ``rollsheet_creator.py``: Takes a CSV file produced by the Brightspace grade export feature, and produces a rollsheet.
+The Python script ``webassign_grades_to_brightspace.py`` converts the WebAssign grade export to a format that can be imported under D2L Brightspace.
 
-* ``webwork_classlist_creator.py``: Takes a CSV file produced by the Brightspace grade export feature, and produces a WeBWorK ``.lst`` file.
+This script is written for Python 3.
 
-* ``webassign_grades_to_brightspace.py``: Takes a CSV file produced by the WebAssign grade export feature, and produces a CSV file suitable for importing into the Brightspace grade book.
+## Usage
 
-* ``webwork_grades_to_brightspace.py``: Takes a CSV file produced by the WeBWorK grade export feature, and produces a CSV file suitable for importing into the Brightspace grade book.
+For this script to work, you need 2 files:
+
+First is a CSV file exported from the D2L Brightspace gradebook feature using with the following
+options:
+
+* Key field: "Both"
+* User details: All three checked (last name, first name, and email)
+* A "WebAssignUsername" field with their WebAssign username
+
+Second is the WebAssign grade export, exported in ``tsv`` format. 
+
+Syntax:
+> ``./webassign_grades_to_brightspace.py [d2l input file] [WeBWorK input file] [D2L output file]``
 
 ## Important license/warranty notice
 
-Copyright (c) 2019 Christopher L. Phan
+Copyright (c) 2017 Christopher L. Phan
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
