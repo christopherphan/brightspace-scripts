@@ -32,7 +32,7 @@ Second is a LaTeX template file. This file should have the following:
 
    > ``%%SECTION REPLACE``
 
-This file will create a new LaTeX file, in which ``%%ROLL NAMES HERE`` is replaced with a set of lines of the form ``\rollsheetbox{[student name]}``. If you don't specify a section, then every student in the CSV file will get a ``\rollsheetbox``; otherwise, only students with the "Section" field matching the section argument on the command line will get a ``\rollsheetbox``. The students will be listed in alphabetical order, by surname and then by given name.
+This file will create a new LaTeX file, in which ``%%ROLL NAMES HERE`` is replaced with a set of lines of the form ``\rollsheetbox{``*student name*``}``. If you don't specify a section, then every student in the CSV file will get a ``\rollsheetbox``; otherwise, only students with the "Section" field matching the section argument on the command line will get a ``\rollsheetbox``. The students will be listed in alphabetical order, by surname and then by given name.
 
 If a section is specified at the command line, then the ``%SECTION REPLACE`` line will be replaced with the section.
 
@@ -41,13 +41,13 @@ After the LaTeX file is produced, ``pdflatex`` is run on the file to produce a P
 An example LaTeX template is given.
 
 Syntax:
->  ``./rollsheet_creator.py [d2l input file] [LaTeX template file] [section]``
+>  ``./rollsheet_creator.py d2l-input-file LaTeX-template-file [section]``
 
 The [section] argument is optional.
 
 ## Important license/warranty notice
 
-Copyright (c) 2017 Christopher L. Phan
+Copyright (c) 2019 Christopher L. Phan
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

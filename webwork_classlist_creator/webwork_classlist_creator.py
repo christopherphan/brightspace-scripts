@@ -4,11 +4,11 @@
 #
 # Christopher L. Phan, Ph.D.
 # cphan@chrisphan.com
-# Last updated: 2017-08-24
+# Last updated: 2019-05-23
 #
 #################################
 
-# Copyright (c) 2017 Christopher L. Phan
+# Copyright (c) 2019 Christopher L. Phan
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -34,14 +34,14 @@ import csv
 help_string = """
 webwork_classlist_creator.py
 
-Copyright (c) 2017 Christopher L. Phan
+Copyright (c) 2019 Christopher L. Phan
 
 See README.md or source code for important license and disclaimer of warranty
 notice.
 
 Produces a WeBWorK .lst file given a .csv file produced by D2L Brightspace
 
-syntax: ./webwork_classlist_creator.py [input file] [output file]
+syntax: ./webwork_classlist_creator.py input-file output-file
 
 The CSV file should be produced by the Export Grades feature on D2L Brightspace
 with the following options:

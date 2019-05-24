@@ -25,11 +25,11 @@ WeBWorK is the same as their userid on D2L Brightspace (in the case of
 Minnesota State students, that would be their StarID).
 
 Syntax:
-> ``./webwork_grades_to_brightspace.py [d2l input file] [WeBWorK input file] [D2L output file]``
+> ``./webwork_grades_to_brightspace.py d2l-input-file WeBWorK-input-file D2L-output-file``
 
 ## Important license/warranty notice
 
-Copyright (c) 2017 Christopher L. Phan
+Copyright (c) 2019 Christopher L. Phan
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

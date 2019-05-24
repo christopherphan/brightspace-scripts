@@ -4,11 +4,11 @@
 #
 # Christopher L. Phan, Ph.D.
 # cphan@chrisphan.com
-# Last updated: 2017-08-24
+# Last updated: 2019-05-23
 #
 #################################
 
-# Copyright (c) 2017 Christopher L. Phan
+# Copyright (c) 2019 Christopher L. Phan
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -31,7 +31,7 @@
 help_string = """
 rollsheet_creator.py
 
-Copyright (c) 2017 Christopher L. Phan
+Copyright (c) 2019 Christopher L. Phan
 
 See README.md or source code for important license and disclaimer of warranty
 notice.
@@ -49,7 +49,7 @@ Optionally: A "Section" field, checked to be exported
 
 Second is a LaTeX template file. See README.md for details.
 
-syntax: ./rollsheet_creator.py [d2l input file] [LaTeX template file] [section]
+syntax: ./rollsheet_creator.py d2l-input-file LaTeX-template-file [section]
 
 The [section] argument is optional.
 """

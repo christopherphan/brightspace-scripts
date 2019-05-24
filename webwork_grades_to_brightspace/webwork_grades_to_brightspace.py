@@ -4,11 +4,11 @@
 #
 # Christopher L. Phan, Ph.D.
 # cphan@chrisphan.com
-# Last updated: 2017-08-24
+# Last updated: 2019-05-23
 #
 #################################
 
-# Copyright (c) 2017 Christopher L. Phan
+# Copyright (c) 2019 Christopher L. Phan
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -31,7 +31,7 @@
 help_string = """
 webwork_grades_to_brightspace.py
 
-Copyright (c) 2017 Christopher L. Phan
+Copyright (c) 2019 Christopher L. Phan
 
 See README.md or source code for important license and disclaimer of warranty
 notice.
@@ -51,7 +51,7 @@ Second is the WeBWorK grade export. NOTE: We assume the student's userid on
 WeBWorK is the same as their userid on D2L Brightspace (in the case of
 Minnesota State students, that would be their StarID).
 
-syntax: ./webwork_grades_to_brightspace.py [d2l input file] [WeBWorK input file] [D2L output file]
+syntax: ./webwork_grades_to_brightspace.py d2l-input-file WeBWorK-input-file D2L-output-file
 """
 
 import csv
